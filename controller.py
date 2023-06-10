@@ -30,10 +30,20 @@ class MyController(app_manager.RyuApp):
         #Bind host MAC adresses to interface
         self.services_slicing_hosts = ["00:00:00:00:00:01","00:00:00:00:00:02","00:00:00:00:00:03","00:00:00:00:00:04"]
         self.host_connects_to_switch = {
-            1 : ["00:00:00:00:00:01","00:00:00:00:00:02","00:00:00:00:00:06"],
+            1 : ["00:00:00:00:00:01","00:00:00:00:00:02"],
             2 : ["00:00:00:00:00:07"],
             3 : ["00:00:00:00:00:05"],
-            4 : ["00:00:00:00:00:03","00:00:00:00:00:04","00:00:00:00:00:08"]
+            4 : ["00:00:00:00:00:03","00:00:00:00:00:04"]
+        }
+        self.slice_host = {
+            "00:00:00:00:00:01" : 1,
+            "00:00:00:00:00:02" : 1,
+            "00:00:00:00:00:03" : 1,
+            "00:00:00:00:00:04" : 1,
+            "00:00:00:00:00:05" : 2,
+            "00:00:00:00:00:06" : 2,
+            "00:00:00:00:00:07" : 3,
+            "00:00:00:00:00:08" : 3,
         }
         self.mac_to_port = {
             1: {
@@ -65,6 +75,8 @@ class MyController(app_manager.RyuApp):
                 "00:00:00:00:00:08": 5,
             },
         }
+
+        
 
         #9998 used for iperf testing, 9999 used for service packets
         self.slice_TCport = [9998, 9999]
@@ -142,10 +154,10 @@ class MyController(app_manager.RyuApp):
 
   
         print(src,dst,dpid)
+        #check stesso slice
+        if dpid in self.mac_to_port and src in self.slice_host.keys() and dst in self.slice_host.keys() and self.slice_host[src] == self.slice_host[dst]:
 
-
-        if dpid in self.mac_to_port:
-
+            
             # check se gli host di partenza e arrivo sono tra quelli che fanno lo slicing di servizio
             if src in self.services_slicing_hosts and dst in self.services_slicing_hosts:
                 # check se l'host di arrivo è direttamente connesso allo switch (dpid)
@@ -182,8 +194,6 @@ class MyController(app_manager.RyuApp):
                         self.add_flow(datapath, 2, match, actions)
                         self._send_package(msg, datapath, in_port, actions)
 
-
-                     
 
                     else : 
                         print("siamo nella slice 2")
@@ -226,10 +236,28 @@ class MyController(app_manager.RyuApp):
 
                 else :
 
-                    # siamo nello switch 2 o 3
+                    # siamo nello switch 2 o 3 oppure 
                     print("siamo nello switch 2 o 3")
 
                     # Extract the output port
+                    out_port = self.mac_to_port[dpid][dst]
+
+                    # Define a list of actions that are executed if the new flow entry is matched
+                    actions = [datapath.ofproto_parser.OFPActionOutput(out_port)]
+
+                    # Creating a new OFPMatch object to match incoming packets based on the destination MAC address
+                    match = datapath.ofproto_parser.OFPMatch(eth_dst=dst)
+                    
+                    # Add a new flow entry to the flow table of the switch
+                    self.add_flow(datapath, 1, match, actions)
+
+                    # Send the packet
+                    self._send_package(msg, datapath, in_port, actions)
+
+            elif src not in self.services_slicing_hosts and dst  not in self.services_slicing_hosts:
+
+                # Extract the output port
+                if dst in self.mac_to_port[dpid]:
                     out_port = self.mac_to_port[dpid][dst]
 
                     # Define a list of actions that are executed if the new flow entry is matched
