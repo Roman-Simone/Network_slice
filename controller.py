@@ -143,12 +143,14 @@ class MyController(app_manager.RyuApp):
   
         print(src,dst,dpid)
 
+
         if dpid in self.mac_to_port:
 
             # check se gli host di partenza e arrivo sono tra quelli che fanno lo slicing di servizio
             if src in self.services_slicing_hosts and dst in self.services_slicing_hosts:
                 # check se l'host di arrivo è direttamente connesso allo switch (dpid)
                 if dst in self.host_connects_to_switch[dpid]:
+                    print("Invio diretto")
                     
                     out_port = self.mac_to_port[dpid][dst]
                     print("outport " + str(out_port))
@@ -181,7 +183,7 @@ class MyController(app_manager.RyuApp):
                         self._send_package(msg, datapath, in_port, actions)
 
 
-                        
+                     
 
                     else : 
                         print("siamo nella slice 2")

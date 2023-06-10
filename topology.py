@@ -1,7 +1,7 @@
 import os
 import shlex
 import time
-
+import json
 from subprocess import check_output
 
 from comnetsemu.cli import CLI
@@ -14,6 +14,51 @@ from mininet.util import dumpNodeConnections
 from mininet.topo import Topo
 from mininet.node import OVSKernelSwitch, RemoteController
     
+
+def mapNetworkScenarios(net: Mininet, host_pairs: list = [["h1","h3"],["h2","h4"],["h1","h4"],["h2","h3"]]):
+
+
+    # Execute iperf on each pair
+    network_map = {"network": [], "scenario": "default"}
+
+    for pair in host_pairs:
+
+        hosts = []
+
+        for host in net.hosts:
+            if host.name in pair:
+                hosts.append(host)
+        
+        if len(hosts) != 2:
+            continue
+
+        h1, h2 = hosts
+
+        # Check if hosts are connected
+        result = net.ping([h1,h2],timeout="0.5")
+
+        if result < 100:
+            host1_speed, host2_speed = net.iperf(hosts=[h1, h2], seconds=1) # Host connected, testing bandwidth
+
+        else:
+            host1_speed = "-"
+            host2_speed = "-"
+        
+        # Add results to the network map
+        network_map["network"].append({
+            "host1": {
+                "name": h1.name,
+                "speed": host1_speed
+            },
+
+            "host2": {
+                "name": h2.name,
+                "speed": host2_speed
+            }
+        })
+    
+    return network_map
+
 class NetworkSlicingTopo(Topo):
     def __init__(self):
         # Initialize topology
@@ -21,7 +66,7 @@ class NetworkSlicingTopo(Topo):
 
         # Create template host, switch, and link
         # two templates for links creation
-        host_config = {}
+        host_config = dict(bw=10)
         switch_config = {}
 
         switches = {}
@@ -56,6 +101,8 @@ class NetworkSlicingTopo(Topo):
 
 
 
+
+
 # topos = {"networkslicingtopo": (lambda: NetworkSlicingTopo())}
 
 
@@ -85,12 +132,28 @@ try:
 
         dumpNodeConnections(net.hosts)
 
-        CLI(net)
+        inMenu = True
+        while inMenu:
+            choice = input("\n*** MENU:\n1) Open CLI\n2) iperf \n3) Stop network simulation\nACTION: ")
+            if choice=="1":
+                #1 = Mininet CLI
+                CLI(net)
+            elif choice=="2":
+                    network_map = mapNetworkScenarios(net)
+                    network_map = json.dumps(network_map)
+                    print(network_map)
+            elif choice=="3":
+                inMenu = False
 
 
-        os.system("sudo mn -c && clear")
+
+
         net.stop()
+        os.system("sudo mn -c && clear")
+
 except Exception as e: 
     info("\n*** Osti errore popo!\n")
     print(e)
     net.stop()
+
+    
