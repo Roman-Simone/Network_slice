@@ -158,43 +158,104 @@ class MyController(app_manager.RyuApp):
                     self._send_package(msg, datapath, in_port, actions)
 
                 if dpid in self.end_swtiches :
+                    print("siamo nello switch 1 o 4")
 
                     # siamo nello switch 1 o 4
 
                     #decidere se andare sulla slice video (UDP) o non-video (NON UDP)
 
                     if (pkt.get_protocol(udp.udp)):
-                        
+                        print("siamo nella slice 1 ")
                         #siamo nella slice 1 
                         slice_number = 1
+                        out_port = self.slice_ports[dpid][slice_number]
+                        match = datapath.ofproto_parser.OFPMatch(
+                            in_port=in_port,
+                            eth_dst=dst,
+                            eth_type=ether_types.ETH_TYPE_IP,
+                            ip_proto=0x11,  # udp
+                            udp_dst=pkt.get_protocol(udp.udp).dst_port,
+                        )
+                        actions = [datapath.ofproto_parser.OFPActionOutput(out_port)]
+                        self.add_flow(datapath, 2, match, actions)
+                        self._send_package(msg, datapath, in_port, actions)
+
+
+                        
 
                     else : 
+                        print("siamo nella slice 2")
                         #siamo nella slice 2
                         # mandare pacchetti degli altri tipi
-                        slice_number = 2
+
+                        if pkt.get_protocol(tcp.tcp):
+                            print("tcp")
+                            #Create new flow automatically and send to low performance slice
+                            slice_number = 2
+                            out_port = self.slice_ports[dpid][slice_number]
+                            match = datapath.ofproto_parser.OFPMatch(
+                                in_port=in_port,
+                                eth_dst=dst,
+                                eth_src=src,
+                                eth_type=ether_types.ETH_TYPE_IP,
+                                ip_proto=0x06,  # tcp
+                            )
+                            actions = [datapath.ofproto_parser.OFPActionOutput(out_port)]
+                            self.add_flow(datapath, 1, match, actions)
+                            self._send_package(msg, datapath, in_port, actions)
+                        elif pkt.get_protocol(icmp.icmp):
+                            print("icmp")
+                            #Create new flow automatically and send to low performance slice
+                            slice_number = 2
+                            out_port = self.slice_ports[dpid][slice_number]
+                            match = datapath.ofproto_parser.OFPMatch(
+                                in_port=in_port,
+                                eth_dst=dst,
+                                eth_src=src,
+                                eth_type=ether_types.ETH_TYPE_IP,
+                                ip_proto=0x01,  # icmp
+                            )
+                            actions = [datapath.ofproto_parser.OFPActionOutput(out_port)]
+                            self.add_flow(datapath, 1, match, actions)
+                            self._send_package(msg, datapath, in_port, actions)
+
                     
                     out_port = self.slice_ports[dpid][slice_number]
 
                 else :
 
                     # siamo nello switch 2 o 3
+                    print("siamo nello switch 2 o 3")
 
+                    # Extract the output port
                     out_port = self.mac_to_port[dpid][dst]
 
+                    # Define a list of actions that are executed if the new flow entry is matched
+                    actions = [datapath.ofproto_parser.OFPActionOutput(out_port)]
 
-                print("outport " + str(out_port))
+                    # Creating a new OFPMatch object to match incoming packets based on the destination MAC address
+                    match = datapath.ofproto_parser.OFPMatch(eth_dst=dst)
+                    
+                    # Add a new flow entry to the flow table of the switch
+                    self.add_flow(datapath, 1, match, actions)
 
-                match = datapath.ofproto_parser.OFPMatch(
-                    in_port=in_port,
-                    eth_dst=dst,
-                    eth_type=ether_types.ETH_TYPE_IP,
-                    ip_proto=0x11,  # udp
-                    udp_dst=pkt.get_protocol(udp.udp).dst_port,
-                )
+                    # Send the packet
+                    self._send_package(msg, datapath, in_port, actions)
 
-                actions = [datapath.ofproto_parser.OFPActionOutput(out_port)]
-                self.add_flow(datapath, 2, match, actions)
-                self._send_package(msg, datapath, in_port, actions)
+
+                # print("outport " + str(out_port))
+
+                # match = datapath.ofproto_parser.OFPMatch(
+                #     in_port=in_port,
+                #     eth_dst=dst,
+                #     eth_type=ether_types.ETH_TYPE_IP,
+                #     ip_proto=0x11,  # udp
+                #     udp_dst=pkt.get_protocol(udp.udp).dst_port,
+                # )
+
+                # actions = [datapath.ofproto_parser.OFPActionOutput(out_port)]
+                # self.add_flow(datapath, 2, match, actions)
+                # self._send_package(msg, datapath, in_port, actions)
 
 
 
