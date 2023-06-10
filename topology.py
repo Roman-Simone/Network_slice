@@ -9,6 +9,7 @@ from comnetsemu.net import Containernet, VNFManager
 from mininet.net import Mininet
 from mininet.link import TCLink
 from mininet.log import info, setLogLevel
+from mininet.util import dumpNodeConnections
 
 from mininet.topo import Topo
 from mininet.node import OVSKernelSwitch, RemoteController
@@ -23,6 +24,10 @@ class NetworkSlicingTopo(Topo):
         host_config = {}
         switch_config = {}
 
+        switches = {}
+        for i in range(4):
+            sconfig = {"dpid": "%016x" % (i + 1)}
+            self.addSwitch("s%d" % (i + 1), **sconfig)
         
         self.addHost("h1",ip="10.0.0.1/24",mac="00:00:00:00:00:01")
         self.addHost("h2",ip="10.0.0.2/24",mac="00:00:00:00:00:02")
@@ -33,10 +38,7 @@ class NetworkSlicingTopo(Topo):
         self.addHost("h7",ip="10.0.0.7/24",mac="00:00:00:00:00:07")
         self.addHost("h8",ip="10.0.0.8/24",mac="00:00:00:00:00:08")
 
-        switches = {}
-        for i in range(4):
-            sconfig = {"dpid": "%016x" % (i + 1)}
-            self.addSwitch("s%d" % (i + 1), **sconfig)
+        
 
         self.addLink("s1", "s2", **switch_config)
         self.addLink("s2", "s4", **switch_config)
@@ -54,14 +56,14 @@ class NetworkSlicingTopo(Topo):
 
 
 
-topos = {"networkslicingtopo": (lambda: NetworkSlicingTopo())}
+# topos = {"networkslicingtopo": (lambda: NetworkSlicingTopo())}
 
 
 try:
     if __name__ == "__main__":
         
         setLogLevel("info")
-
+ 
         topo = NetworkSlicingTopo()
         net = Mininet(
             topo=topo,
@@ -72,6 +74,16 @@ try:
             autoSetMacs=True,
             autoStaticArp=True,
         )
+
+        # Build
+        print("[INFO] Building")
+        net.build()
+
+        # Start
+        print("[INFO] Starting")
+        net.start()
+
+        dumpNodeConnections(net.hosts)
 
         CLI(net)
 
