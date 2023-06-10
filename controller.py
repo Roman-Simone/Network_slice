@@ -159,7 +159,7 @@ class MyController(app_manager.RyuApp):
                     self.add_flow(datapath, 1, match, actions)
                     self._send_package(msg, datapath, in_port, actions)
 
-                if dpid in self.end_swtiches :
+                elif dpid in self.end_swtiches :
                     print("siamo nello switch 1 o 4")
 
                     # siamo nello switch 1 o 4

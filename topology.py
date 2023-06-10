@@ -38,7 +38,7 @@ def mapNetworkScenarios(net: Mininet, host_pairs: list = [["h1","h3"],["h2","h4"
         result = net.ping([h1,h2],timeout="0.5")
 
         if result < 100:
-            host1_speed, host2_speed = net.iperf(hosts=[h1, h2], seconds=1) # Host connected, testing bandwidth
+            host1_speed, host2_speed = net.iperf(hosts=[h1, h2], seconds=5) # Host connected, testing bandwidth
 
         else:
             host1_speed = "-"
