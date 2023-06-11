@@ -152,10 +152,9 @@ class MyController(app_manager.RyuApp):
 
         dpid = datapath.id
 
-  
         print(src,dst,dpid)
         #check stesso slice
-        if dpid in self.mac_to_port and src in self.slice_host.keys() and dst in self.slice_host.keys() and self.slice_host[src] == self.slice_host[dst]:
+        if dpid in self.mac_to_port and ((src in self.slice_host.keys() and dst in self.slice_host.keys()) and self.slice_host[src] == self.slice_host[dst]):
 
             
             # check se gli host di partenza e arrivo sono tra quelli che fanno lo slicing di servizio
@@ -168,7 +167,7 @@ class MyController(app_manager.RyuApp):
                     print("outport " + str(out_port))
                     actions = [datapath.ofproto_parser.OFPActionOutput(out_port)]
                     match = datapath.ofproto_parser.OFPMatch(eth_dst=dst)
-                    self.add_flow(datapath, 1, match, actions)
+                    self.add_flow(datapath, 1, match, actions) #ok
                     self._send_package(msg, datapath, in_port, actions)
 
                 elif dpid in self.end_swtiches :
@@ -191,7 +190,7 @@ class MyController(app_manager.RyuApp):
                             udp_dst=pkt.get_protocol(udp.udp).dst_port,
                         )
                         actions = [datapath.ofproto_parser.OFPActionOutput(out_port)]
-                        self.add_flow(datapath, 2, match, actions)
+                        self.add_flow(datapath, 2, match, actions) #ok
                         self._send_package(msg, datapath, in_port, actions)
 
 
@@ -213,7 +212,7 @@ class MyController(app_manager.RyuApp):
                                 ip_proto=0x06,  # tcp
                             )
                             actions = [datapath.ofproto_parser.OFPActionOutput(out_port)]
-                            self.add_flow(datapath, 1, match, actions)
+                            self.add_flow(datapath, 1, match, actions) #ok
                             self._send_package(msg, datapath, in_port, actions)
                         elif pkt.get_protocol(icmp.icmp):
                             print("icmp")
@@ -228,7 +227,7 @@ class MyController(app_manager.RyuApp):
                                 ip_proto=0x01,  # icmp
                             )
                             actions = [datapath.ofproto_parser.OFPActionOutput(out_port)]
-                            self.add_flow(datapath, 1, match, actions)
+                            self.add_flow(datapath, 1, match, actions) #ok
                             self._send_package(msg, datapath, in_port, actions)
 
                     
@@ -249,15 +248,16 @@ class MyController(app_manager.RyuApp):
                     match = datapath.ofproto_parser.OFPMatch(eth_dst=dst)
                     
                     # Add a new flow entry to the flow table of the switch
-                    self.add_flow(datapath, 1, match, actions)
+                    self.add_flow(datapath, 1, match, actions)#ok
 
                     # Send the packet
                     self._send_package(msg, datapath, in_port, actions)
 
-            elif src not in self.services_slicing_hosts and dst  not in self.services_slicing_hosts:
+            elif src not in self.services_slicing_hosts and dst not in self.services_slicing_hosts:
 
                 # Extract the output port
-                if dst in self.mac_to_port[dpid]:
+                if dst in self.mac_to_port[dpid] and self.slice_host[src] == self.slice_host[dst]:
+                    print("caso slice 2 o 3")
                     out_port = self.mac_to_port[dpid][dst]
 
                     # Define a list of actions that are executed if the new flow entry is matched
@@ -267,7 +267,7 @@ class MyController(app_manager.RyuApp):
                     match = datapath.ofproto_parser.OFPMatch(eth_dst=dst)
                     
                     # Add a new flow entry to the flow table of the switch
-                    self.add_flow(datapath, 1, match, actions)
+                    # self.add_flow(datapath, 1, match, actions)
 
                     # Send the packet
                     self._send_package(msg, datapath, in_port, actions)
