@@ -66,8 +66,11 @@ class NetworkSlicingTopo(Topo):
 
         # Create template host, switch, and link
         # two templates for links creation
-        host_config = dict(bw=10)
-        switch_config = {}
+        host_config = {}
+        switch_config_video = {} #dict(bw=10)
+        switch_config_non_video = {}# dict(bw=8)
+
+
 
         switches = {}
         for i in range(4):
@@ -85,10 +88,10 @@ class NetworkSlicingTopo(Topo):
 
         
 
-        self.addLink("s1", "s2", **switch_config)
-        self.addLink("s2", "s4", **switch_config)
-        self.addLink("s1", "s3", **switch_config)
-        self.addLink("s3", "s4", **switch_config)
+        self.addLink("s1", "s2", **switch_config_video)
+        self.addLink("s2", "s4", **switch_config_video)
+        self.addLink("s1", "s3", **switch_config_non_video)
+        self.addLink("s3", "s4", **switch_config_non_video)
 
         self.addLink("h1", "s1", **host_config)
         self.addLink("h2", "s1", **host_config)
