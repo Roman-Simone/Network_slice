@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CIAOOOOO</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #222;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #444;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #555;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .not-available {
+            color: red;
+        }
+
+        .card-header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .card {
+            background-color: #444;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .list-group-item {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 10px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+        }
+
+        .button-bar {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button-bar button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="display-4">NETWORKING II Project</h1>
+        <h2 class="h4 text-uppercase">
+            <center>developed by S. Roman, S. Bonetto and M. Rigon</center>
+        </h2>
+        <br>
+        <br>
+        <div id="output" class="row"></div>
+
+        <div class="button-bar">
+            <button id="defaultBtn" class="btn btn-dark active" onclick="handleButtonClick('default')">Scenario
+                Default</button>
+            <button id="lowerBtn" class="btn btn-dark" onclick="handleButtonClick('lower')">Scenario Lower</button>
+            <button id="higherBtn" class="btn btn-dark" onclick="handleButtonClick('higher')">Scenario Higher</button>
+            <button id="totalBtn" class="btn btn-dark" onclick="handleButtonClick('total')">Scenario Total</button>
+        </div>
+
+        <script>
+            function handleButtonClick(scenario) {
+                document.querySelectorAll('.button-bar button').forEach(function (btn) {
+                    btn.classList.remove('active');
+                });
+
+                document.getElementById(scenario + 'Btn').classList.add('active');
+
+                sendRequest(scenario);
+            }
+        </script>
+
+        <div id="scenario_image" class="image-container">
+            <img src="images/Scenario_0_Lower.png" alt="Scenario Image">
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <table class="table table-borderless text-center">
+              <thead class="thead-dark">
+                <tr>
+                  <th class="text-white">Nome</th>
+                  <th class="text-white">Matricola</th>
+                  <th class="text-white">Github</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td class="text-white">Bonetto Stefano</td>
+                    <td class="text-white">217861</td>
+                    <td><a href="https://github.com/stefanoobonetto"  >github.com/stefanoobonetto</a></td>
+                </tr>
+                <tr>
+                    <td class="text-white">Bonetto Stefano</td>
+                    <td class="text-white">217861</td>
+                    <td><a href="https://github.com/stefanoobonetto"  >github.com/stefanoobonetto</a></td>
+                </tr>
+                <tr>
+                    <td class="text-white">Bonetto Stefano</td>
+                    <td class="text-white">217861</td>
+                    <td><a href="https://github.com/stefanoobonetto"  >github.com/stefanoobonetto</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>          
+    </div>
+
+
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        var jsonData = {   //poi leggo da richiesta al server
+            "network": [
+                {
+                    "host1": { "name": "h1", "speed": "7.00 Mbits/sec" },
+                    "host2": { "name": "h3", "speed": "8.15 Mbits/sec" }
+                },
+                {
+                    "host1": { "name": "h2", "speed": "7.59 Mbits/sec" },
+                    "host2": { "name": "h4", "speed": "8.99 Mbits/sec" }
+                },
+                {
+                    "host1": { "name": "h1", "speed": "7.41 Mbits/sec" },
+                    "host2": { "name": "h4", "speed": "8.59 Mbits/sec" }
+                },
+                {
+                    "host1": { "name": "h2", "speed": "6.80 Mbits/sec" },
+                    "host2": { "name": "h3", "speed": "8.34 Mbits/sec" }
+                },
+                {
+                    "host1": { "name": "h5", "speed": "-" },
+                    "host2": { "name": "h6", "speed": "-" }
+                },
+                {
+                    "host1": { "name": "h7", "speed": "-" },
+                    "host2": { "name": "h8", "speed": "-" }
+                }
+            ]
+        };
+
+        var networkData = jsonData.network;
+        var output = "";
+        for (var i = 0; i < networkData.length; i++) {
+            var entry = networkData[i];
+            var host1 = entry.host1.name;
+            var host2 = entry.host2.name;
+            var speed1 = entry.host1.speed;
+            var speed2 = entry.host2.speed;
+
+            output += "<div class='col-md-6'>";
+            output += "<div class='card mb-4'>";
+            output += "<div class='card-header'><center><b>" + host1 + " ---> " + host2 + "</b></center></div>";
+            output += "<table class='table'>";
+            output += "<thead><tr><th>Host</th><th>Speed</th></tr></thead>";
+            output += "<tbody>";
+
+            if (speed1 !== "-" && speed2 !== "-") {
+                output += "<tr><td>" + host1 + "</td><td>" + speed1 + "</td></tr>";
+                output += "<tr><td>" + host2 + "</td><td>" + speed2 + "</td></tr>";
+            } else {
+                output += "<tr><td colspan='2' class='not-available'>Uno o entrambi gli host non disponibili per la proiezione dei file.</td></tr>";
+            }
+
+            output += "</tbody>";
+            output += "</table>";
+            output += "</div>";
+            output += "</div>";
+        }
+
+        document.getElementById("output").innerHTML = output;
+
+        function sendRequest(requestName) {
+            var imageContainer = document.getElementById("scenario_image");
+            var image = imageContainer.querySelector("img");
+
+            switch (requestName) {
+                case 'default':
+                    image.src = "images/Scenario_0_Default.png";
+                    break;
+                case 'lower':
+                    image.src = "images/Scenario_1_Lower.png";
+                    break;
+                case 'higher':
+                    image.src = "images/Scenario_2_Higher.png";
+                    break;
+                case 'total':
+                    image.src = "images/Scenario_3_Total.png";
+                    break;
+                default:
+                    console.log('Errore nella richiesta');
+                    return;
+            }
+        }
+
+        function sendRequest(requestName) {
+            switch (requestName) {
+                case 'default':
+                    // invio richiesta HTML per attivazione scenario default
+                    var image = document.querySelector('#scenario_image img');
+                    image.src = 'images/Scenario_0_Lower.png';
+                    console.log('Scenario default selezionato');
+                    break;
+                case 'lower':
+                    // invio richiesta HTML per attivazione scenario lower
+                    var image = document.querySelector('#scenario_image img');
+                    image.src = 'images/Scenario_1_Lower.png';
+                    console.log('Scenario lower selezionato');
+                    break;
+                case 'higher':
+                    // invio richiesta HTML per attivazione scenario higher
+                    var image = document.querySelector('#scenario_image img');
+                    image.src = 'images/Scenario_2_Upper.png';
+                    console.log('Scenario higher selezionato');
+                    break;
+                case 'total':
+                    // invio richiesta HTML per attivazione scenario total
+                    var image = document.querySelector('#scenario_image img');
+                    image.src = 'images/Scenario_3_Total.png';
+                    console.log('Scenario total selezionato');
+                    break;
+                default:
+                    console.log('Errore nella richiesta');
+            }
+        }
+    </script>
+</body>
+
+</html>
