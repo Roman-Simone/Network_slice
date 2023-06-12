@@ -2,6 +2,9 @@
 
 clear
 
+bash ./reset.sh
+
+
 printf "[INFO] Loading Scenario Default \n"
 
 printf "[INFO] Setting up switches...\n\n"

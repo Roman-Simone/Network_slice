@@ -133,6 +133,8 @@ try:
         print("[INFO] Starting")
         net.start()
 
+        os.system("bash ./scenarios/default.sh")
+
         dumpNodeConnections(net.hosts)
 
         inMenu = True
