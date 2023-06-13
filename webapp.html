@@ -93,7 +93,7 @@
 <script>
     
     function eseguiAllAperturaPagina(){
-        refreshAll()
+        changeScenario("default")
     }
 </script>
 
@@ -109,15 +109,15 @@
         <div id="output" class="row"></div>
 
         <div class="button-bar">
-            <button id="defaultBtn" class="btn btn-dark active" onclick="handleButtonClick('default')">Scenario Default</button>
-            <button id="scenario1Btn" class="btn btn-dark" onclick="handleButtonClick('scenario1')">Scenario Lower</button>
-            <button id="scenario2Btn" class="btn btn-dark" onclick="handleButtonClick('scenario2')">Scenario Higher</button>
-            <button id="scenario3Btn" class="btn btn-dark" onclick="handleButtonClick('scenario3')">Scenario Total</button>
+            <button id="defaultBtn" class="btn btn-dark active" onclick="changeScenario('default')">Scenario Default</button>
+            <button id="scenario1Btn" class="btn btn-dark" onclick="changeScenario('scenario1')">Scenario Lower</button>
+            <button id="scenario2Btn" class="btn btn-dark" onclick="changeScenario('scenario2')">Scenario Higher</button>
+            <button id="scenario3Btn" class="btn btn-dark" onclick="changeScenario('scenario3')">Scenario Total</button>
             <button id="refresh3Btn" class="btn btn-light" onclick="refreshAll()">Refresh Throughputs</button>
         </div>
 
         <script>
-            function handleButtonClick(scenario) {
+            function changeScenario(scenario) {
                 document.querySelectorAll('.button-bar button').forEach(function (btn) {
                     btn.classList.remove('active');
                 });
