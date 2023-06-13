@@ -123,7 +123,7 @@
         </script>
 
         <div id="scenario_image" class="image-container">
-            <img src="images/Scenario_0_Lower.png" alt="Scenario Image">
+            <img src="https://raw.githubusercontent.com/Sro552/network_slice/main/images/Scenario_0_Lower.png" alt="Scenario Image">
         </div>
         <br>
         <br>
@@ -143,9 +143,9 @@
                     <td><a href="https://github.com/stefanoobonetto"  >github.com/stefanoobonetto</a></td>
                 </tr>
                 <tr>
-                    <td class="text-white">Bonetto Stefano</td>
-                    <td class="text-white">217861</td>
-                    <td><a href="https://github.com/stefanoobonetto"  >github.com/stefanoobonetto</a></td>
+                    <td class="text-white">Rigon Mattia</td>
+                    <td class="text-white">217868</td>
+                    <td><a href="https://github.com/stefanoobonetto"  >github.com/MattiaRigon</a></td>
                 </tr>
                 <tr>
                     <td class="text-white">Bonetto Stefano</td>
@@ -228,16 +228,16 @@
 
             switch (requestName) {
                 case 'default':
-                    image.src = "images/Scenario_0_Default.png";
+                    image.src = "https://raw.githubusercontent.com/Sro552/network_slice/main/images/Scenario_0_Lower.png";
                     break;
                 case 'lower':
-                    image.src = "images/Scenario_1_Lower.png";
+                    image.src = "https://github.com/Sro552/network_slice/blob/main/images/Scenario_1_Lower.png?raw=true";
                     break;
                 case 'higher':
-                    image.src = "images/Scenario_2_Higher.png";
+                    image.src = "https://github.com/Sro552/network_slice/blob/main/images/Scenario_2_Upper.png?raw=true";
                     break;
                 case 'total':
-                    image.src = "images/Scenario_3_Total.png";
+                    image.src = "https://github.com/Sro552/network_slice/blob/main/images/Scenario_3_Total.png?raw=true";
                     break;
                 default:
                     console.log('Errore nella richiesta');
@@ -250,25 +250,25 @@
                 case 'default':
                     // invio richiesta HTML per attivazione scenario default
                     var image = document.querySelector('#scenario_image img');
-                    image.src = 'images/Scenario_0_Lower.png';
+                    image.src = "https://raw.githubusercontent.com/Sro552/network_slice/main/images/Scenario_0_Lower.png";
                     console.log('Scenario default selezionato');
                     break;
                 case 'lower':
                     // invio richiesta HTML per attivazione scenario lower
                     var image = document.querySelector('#scenario_image img');
-                    image.src = 'images/Scenario_1_Lower.png';
+                    image.src = "https://github.com/Sro552/network_slice/blob/main/images/Scenario_1_Lower.png?raw=true";
                     console.log('Scenario lower selezionato');
                     break;
                 case 'higher':
                     // invio richiesta HTML per attivazione scenario higher
                     var image = document.querySelector('#scenario_image img');
-                    image.src = 'images/Scenario_2_Upper.png';
+                    image.src = "https://github.com/Sro552/network_slice/blob/main/images/Scenario_2_Upper.png?raw=true";
                     console.log('Scenario higher selezionato');
                     break;
                 case 'total':
                     // invio richiesta HTML per attivazione scenario total
                     var image = document.querySelector('#scenario_image img');
-                    image.src = 'images/Scenario_3_Total.png';
+                    image.src = "https://github.com/Sro552/network_slice/blob/main/images/Scenario_3_Total.png?raw=true";
                     console.log('Scenario total selezionato');
                     break;
                 default:

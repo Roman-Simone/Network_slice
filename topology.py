@@ -26,7 +26,18 @@ class MyHandler(BaseHTTPRequestHandler):
         super().__init__(*args, **kwargs)
 
     def do_GET(self):
-        if self.path == '/get/throughput/tcp/':
+
+        if self.path == '/webapp/':
+            self.send_response(200)
+            self.send_header('Content-type', 'text/html')
+            self.end_headers()
+
+            # Read the HTML file
+            with open('webapp.html', 'r') as file:
+                html_content = file.read()
+
+            self.wfile.write(html_content.encode('utf-8'))
+        elif self.path == '/get/throughput/tcp/':
             # Gestisci la chiamata API
             data = mapNetworkScenariosTcp(self.net)
             self.send_response(200)
