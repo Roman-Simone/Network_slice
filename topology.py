@@ -45,7 +45,7 @@ class MyHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(data.encode('utf-8'))
 
-        elif self.path == '/get/throughput/udp7':
+        elif self.path == '/get/throughput/udp/':
 
             data = mapNetworkScenariosUdp(self.net)
             self.send_response(200)
