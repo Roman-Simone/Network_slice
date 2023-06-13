@@ -90,8 +90,14 @@
         }
     </style>
 </head>
+<script>
+    
+    function eseguiAllAperturaPagina(){
+        refreshAll()
+    }
+</script>
 
-<body>
+<body onload="eseguiAllAperturaPagina()">
 
     <div class="container">
         <h1 class="display-4">NETWORKING II Project</h1>
@@ -133,8 +139,16 @@
                 refreshAll()
             }
             // GET http://192.168.64.16:8000/changeScenario/?data=scenario2/ net::ERR_INTERNET_DISCONNECTED
-            
+            function cleanTable(){
+                for (var i = 0; i < 6; i++) {
+                    document.getElementById("speed1_"+i).innerHTML = "-"
+                    document.getElementById("speed2_"+i).innerHTML = "-"
+                    document.getElementById("speed1UDP_"+i).innerHTML = "-"
+                    document.getElementById("speed2UDP_"+i).innerHTML = "-"
+                }
+            }
             function refreshAll(){
+                // cleanTable()
                 refreshTCP()
                 console.log("sium1")
                 refreshUDP()
@@ -360,6 +374,7 @@
                     console.log('Errore nella richiesta');
             }
         }
+        
     </script>
 </body>
 
