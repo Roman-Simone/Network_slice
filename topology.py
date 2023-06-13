@@ -15,15 +15,20 @@ import threading
 from urllib.parse import urlparse, parse_qs
 
 from itertools import combinations
-
+import logging
 
 httpd = ""
 avaibleScenarios = ["default","scenario1","scenario2","scenario3"]
+logging.basicConfig(filename='log.txt', level=logging.INFO)
 
 class MyHandler(BaseHTTPRequestHandler):
     def __init__(self, net, *args, **kwargs):
         self.net = net
         super().__init__(*args, **kwargs)
+
+    def log_message(self, format, *args):
+        # Save the log message to a file
+        logging.info(format % args)
 
     def do_GET(self):
 
@@ -63,6 +68,8 @@ class MyHandler(BaseHTTPRequestHandler):
             self.wfile.write(data.encode('utf-8'))
 
         elif '/changeScenario/' in self.path:
+
+            print("Richiesta scenario arrivata")
 
             parsed_url = urlparse(self.path)
             query_params = parse_qs(parsed_url.query)
