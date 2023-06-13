@@ -1,0 +1,3550 @@
+INFO:mininet:Connecting to remote controller at 127.0.0.1:6653
+
+INFO:mininet:*** Creating network
+
+INFO:mininet:*** Adding controller
+
+INFO:mininet:*** Adding hosts:
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+*** Adding switches:
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:
+*** Adding links:
+
+INFO:mininet:(h1, s1) 
+INFO:mininet:(h2, s1) 
+INFO:mininet:(h3, s4) 
+INFO:mininet:(h4, s4) 
+INFO:mininet:(h5, s3) 
+INFO:mininet:(h6, s1) 
+INFO:mininet:(h7, s2) 
+INFO:mininet:(h8, s4) 
+INFO:mininet:(s1, s2) 
+INFO:mininet:(s1, s3) 
+INFO:mininet:(s2, s4) 
+INFO:mininet:(s3, s4) 
+INFO:mininet:
+
+INFO:mininet:*** Configuring hosts
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+
+INFO:mininet:*** Starting controller
+
+INFO:mininet:c0 
+INFO:mininet:
+
+INFO:mininet:*** Starting 4 switches
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:...
+INFO:mininet:
+
+Level 25:mininet:h1
+Level 25:mininet: h1-eth0:
+Level 25:mininet:s1-eth3
+Level 25:mininet:
+
+Level 25:mininet:h2
+Level 25:mininet: h2-eth0:
+Level 25:mininet:s1-eth4
+Level 25:mininet:
+
+Level 25:mininet:h3
+Level 25:mininet: h3-eth0:
+Level 25:mininet:s4-eth3
+Level 25:mininet:
+
+Level 25:mininet:h4
+Level 25:mininet: h4-eth0:
+Level 25:mininet:s4-eth4
+Level 25:mininet:
+
+Level 25:mininet:h5
+Level 25:mininet: h5-eth0:
+Level 25:mininet:s3-eth3
+Level 25:mininet:
+
+Level 25:mininet:h6
+Level 25:mininet: h6-eth0:
+Level 25:mininet:s1-eth5
+Level 25:mininet:
+
+Level 25:mininet:h7
+Level 25:mininet: h7-eth0:
+Level 25:mininet:s2-eth3
+Level 25:mininet:
+
+Level 25:mininet:h8
+Level 25:mininet: h8-eth0:
+Level 25:mininet:s4-eth5
+Level 25:mininet:
+
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['3.94 Mbits/sec', '5.16 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.95 Mbits/sec', '5.16 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['4.08 Mbits/sec', '5.23 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['4.15 Mbits/sec', '5.45 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+INFO:mininet:*** Stopping 1 controllers
+
+INFO:mininet:c0 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 12 links
+
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:
+
+INFO:mininet:*** Stopping 4 switches
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 8 hosts
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+*** Done
+
+INFO:mininet:Connecting to remote controller at 127.0.0.1:6653
+
+INFO:mininet:*** Creating network
+
+INFO:mininet:*** Adding controller
+
+INFO:mininet:*** Adding hosts:
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+*** Adding switches:
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:
+*** Adding links:
+
+INFO:mininet:(h1, s1) 
+INFO:mininet:(h2, s1) 
+INFO:mininet:(h3, s4) 
+INFO:mininet:(h4, s4) 
+INFO:mininet:(h5, s3) 
+INFO:mininet:(h6, s1) 
+INFO:mininet:(h7, s2) 
+INFO:mininet:(h8, s4) 
+INFO:mininet:(s1, s2) 
+INFO:mininet:(s1, s3) 
+INFO:mininet:(s2, s4) 
+INFO:mininet:(s3, s4) 
+INFO:mininet:
+
+INFO:mininet:*** Configuring hosts
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+
+INFO:mininet:*** Starting controller
+
+INFO:mininet:c0 
+INFO:mininet:
+
+INFO:mininet:*** Starting 4 switches
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:...
+INFO:mininet:
+
+Level 25:mininet:h1
+Level 25:mininet: h1-eth0:
+Level 25:mininet:s1-eth3
+Level 25:mininet:
+
+Level 25:mininet:h2
+Level 25:mininet: h2-eth0:
+Level 25:mininet:s1-eth4
+Level 25:mininet:
+
+Level 25:mininet:h3
+Level 25:mininet: h3-eth0:
+Level 25:mininet:s4-eth3
+Level 25:mininet:
+
+Level 25:mininet:h4
+Level 25:mininet: h4-eth0:
+Level 25:mininet:s4-eth4
+Level 25:mininet:
+
+Level 25:mininet:h5
+Level 25:mininet: h5-eth0:
+Level 25:mininet:s3-eth3
+Level 25:mininet:
+
+Level 25:mininet:h6
+Level 25:mininet: h6-eth0:
+Level 25:mininet:s1-eth5
+Level 25:mininet:
+
+Level 25:mininet:h7
+Level 25:mininet: h7-eth0:
+Level 25:mininet:s2-eth3
+Level 25:mininet:
+
+Level 25:mininet:h8
+Level 25:mininet: h8-eth0:
+Level 25:mininet:s4-eth5
+Level 25:mininet:
+
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['4.26 Mbits/sec', '5.34 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['4.10 Mbits/sec', '5.11 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['4.25 Mbits/sec', '5.57 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['4.05 Mbits/sec', '5.48 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:mininet:*** Stopping 1 controllers
+
+INFO:mininet:c0 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 12 links
+
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:
+
+INFO:mininet:*** Stopping 4 switches
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 8 hosts
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+*** Done
+
+INFO:mininet:Connecting to remote controller at 127.0.0.1:6653
+
+INFO:mininet:*** Creating network
+
+INFO:mininet:*** Adding controller
+
+INFO:mininet:*** Adding hosts:
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+*** Adding switches:
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:
+*** Adding links:
+
+INFO:mininet:(h1, s1) 
+INFO:mininet:(h2, s1) 
+INFO:mininet:(h3, s4) 
+INFO:mininet:(h4, s4) 
+INFO:mininet:(h5, s3) 
+INFO:mininet:(h6, s1) 
+INFO:mininet:(h7, s2) 
+INFO:mininet:(h8, s4) 
+INFO:mininet:(s1, s2) 
+INFO:mininet:(s1, s3) 
+INFO:mininet:(s2, s4) 
+INFO:mininet:(s3, s4) 
+INFO:mininet:
+
+INFO:mininet:*** Configuring hosts
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+
+INFO:mininet:*** Starting controller
+
+INFO:mininet:c0 
+INFO:mininet:
+
+INFO:mininet:*** Starting 4 switches
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:...
+INFO:mininet:
+
+Level 25:mininet:h1
+Level 25:mininet: h1-eth0:
+Level 25:mininet:s1-eth3
+Level 25:mininet:
+
+Level 25:mininet:h2
+Level 25:mininet: h2-eth0:
+Level 25:mininet:s1-eth4
+Level 25:mininet:
+
+Level 25:mininet:h3
+Level 25:mininet: h3-eth0:
+Level 25:mininet:s4-eth3
+Level 25:mininet:
+
+Level 25:mininet:h4
+Level 25:mininet: h4-eth0:
+Level 25:mininet:s4-eth4
+Level 25:mininet:
+
+Level 25:mininet:h5
+Level 25:mininet: h5-eth0:
+Level 25:mininet:s3-eth3
+Level 25:mininet:
+
+Level 25:mininet:h6
+Level 25:mininet: h6-eth0:
+Level 25:mininet:s1-eth5
+Level 25:mininet:
+
+Level 25:mininet:h7
+Level 25:mininet: h7-eth0:
+Level 25:mininet:s2-eth3
+Level 25:mininet:
+
+Level 25:mininet:h8
+Level 25:mininet: h8-eth0:
+Level 25:mininet:s4-eth5
+Level 25:mininet:
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['4.33 Mbits/sec', '5.21 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.80 Mbits/sec', '5.24 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.96 Mbits/sec', '5.03 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['4.09 Mbits/sec', '5.11 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['10M', '9.74 Mbits/sec', '9.74 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+INFO:mininet:*** Stopping 1 controllers
+
+INFO:mininet:c0 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 12 links
+
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:
+
+INFO:mininet:*** Stopping 4 switches
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 8 hosts
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+*** Done
+
+INFO:mininet:Connecting to remote controller at 127.0.0.1:6653
+
+INFO:mininet:*** Creating network
+
+INFO:mininet:*** Adding controller
+
+INFO:mininet:*** Adding hosts:
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+*** Adding switches:
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:
+*** Adding links:
+
+INFO:mininet:(h1, s1) 
+INFO:mininet:(h2, s1) 
+INFO:mininet:(h3, s4) 
+INFO:mininet:(h4, s4) 
+INFO:mininet:(h5, s3) 
+INFO:mininet:(h6, s1) 
+INFO:mininet:(h7, s2) 
+INFO:mininet:(h8, s4) 
+INFO:mininet:(s1, s2) 
+INFO:mininet:(s1, s3) 
+INFO:mininet:(s2, s4) 
+INFO:mininet:(s3, s4) 
+INFO:mininet:
+
+INFO:mininet:*** Configuring hosts
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+
+INFO:mininet:*** Starting controller
+
+INFO:mininet:c0 
+INFO:mininet:
+
+INFO:mininet:*** Starting 4 switches
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:...
+INFO:mininet:
+
+Level 25:mininet:h1
+Level 25:mininet: h1-eth0:
+Level 25:mininet:s1-eth3
+Level 25:mininet:
+
+Level 25:mininet:h2
+Level 25:mininet: h2-eth0:
+Level 25:mininet:s1-eth4
+Level 25:mininet:
+
+Level 25:mininet:h3
+Level 25:mininet: h3-eth0:
+Level 25:mininet:s4-eth3
+Level 25:mininet:
+
+Level 25:mininet:h4
+Level 25:mininet: h4-eth0:
+Level 25:mininet:s4-eth4
+Level 25:mininet:
+
+Level 25:mininet:h5
+Level 25:mininet: h5-eth0:
+Level 25:mininet:s3-eth3
+Level 25:mininet:
+
+Level 25:mininet:h6
+Level 25:mininet: h6-eth0:
+Level 25:mininet:s1-eth5
+Level 25:mininet:
+
+Level 25:mininet:h7
+Level 25:mininet: h7-eth0:
+Level 25:mininet:s2-eth3
+Level 25:mininet:
+
+Level 25:mininet:h8
+Level 25:mininet: h8-eth0:
+Level 25:mininet:s4-eth5
+Level 25:mininet:
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['4.19 Mbits/sec', '5.65 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['4.16 Mbits/sec', '5.56 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.99 Mbits/sec', '5.00 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['4.17 Mbits/sec', '4.98 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['10M', '9.74 Mbits/sec', '9.74 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['10M', '9.62 Mbits/sec', '9.62 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['10M', '9.75 Mbits/sec', '9.75 Mbits/sec']
+
+INFO:mininet:*** Stopping 1 controllers
+
+INFO:mininet:c0 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 12 links
+
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:
+
+INFO:mininet:*** Stopping 4 switches
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 8 hosts
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+*** Done
+
+INFO:mininet:Connecting to remote controller at 127.0.0.1:6653
+
+INFO:mininet:*** Creating network
+
+INFO:mininet:*** Adding controller
+
+INFO:mininet:*** Adding hosts:
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+*** Adding switches:
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:
+*** Adding links:
+
+INFO:mininet:(h1, s1) 
+INFO:mininet:(h2, s1) 
+INFO:mininet:(h3, s4) 
+INFO:mininet:(h4, s4) 
+INFO:mininet:(h5, s3) 
+INFO:mininet:(h6, s1) 
+INFO:mininet:(h7, s2) 
+INFO:mininet:(h8, s4) 
+INFO:mininet:(s1, s2) 
+INFO:mininet:(s1, s3) 
+INFO:mininet:(s2, s4) 
+INFO:mininet:(s3, s4) 
+INFO:mininet:
+
+INFO:mininet:*** Configuring hosts
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+
+INFO:mininet:*** Starting controller
+
+INFO:mininet:c0 
+INFO:mininet:
+
+INFO:mininet:*** Starting 4 switches
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:...
+INFO:mininet:
+
+Level 25:mininet:h1
+Level 25:mininet: h1-eth0:
+Level 25:mininet:s1-eth3
+Level 25:mininet:
+
+Level 25:mininet:h2
+Level 25:mininet: h2-eth0:
+Level 25:mininet:s1-eth4
+Level 25:mininet:
+
+Level 25:mininet:h3
+Level 25:mininet: h3-eth0:
+Level 25:mininet:s4-eth3
+Level 25:mininet:
+
+Level 25:mininet:h4
+Level 25:mininet: h4-eth0:
+Level 25:mininet:s4-eth4
+Level 25:mininet:
+
+Level 25:mininet:h5
+Level 25:mininet: h5-eth0:
+Level 25:mininet:s3-eth3
+Level 25:mininet:
+
+Level 25:mininet:h6
+Level 25:mininet: h6-eth0:
+Level 25:mininet:s1-eth5
+Level 25:mininet:
+
+Level 25:mininet:h7
+Level 25:mininet: h7-eth0:
+Level 25:mininet:s2-eth3
+Level 25:mininet:
+
+Level 25:mininet:h8
+Level 25:mininet: h8-eth0:
+Level 25:mininet:s4-eth5
+Level 25:mininet:
+
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['3.90 Mbits/sec', '5.20 Mbits/sec']
+
+INFO:mininet:*** Stopping 1 controllers
+
+INFO:mininet:c0 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 12 links
+
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:
+
+INFO:mininet:*** Stopping 4 switches
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 8 hosts
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+*** Done
+
+INFO:mininet:Connecting to remote controller at 127.0.0.1:6653
+
+INFO:mininet:*** Creating network
+
+INFO:mininet:*** Adding controller
+
+INFO:mininet:*** Adding hosts:
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+*** Adding switches:
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:
+*** Adding links:
+
+INFO:mininet:(h1, s1) 
+INFO:mininet:(h2, s1) 
+INFO:mininet:(h3, s4) 
+INFO:mininet:(h4, s4) 
+INFO:mininet:(h5, s3) 
+INFO:mininet:(h6, s1) 
+INFO:mininet:(h7, s2) 
+INFO:mininet:(h8, s4) 
+INFO:mininet:(s1, s2) 
+INFO:mininet:(s1, s3) 
+INFO:mininet:(s2, s4) 
+INFO:mininet:(s3, s4) 
+INFO:mininet:
+
+INFO:mininet:*** Configuring hosts
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+
+INFO:mininet:*** Starting controller
+
+INFO:mininet:c0 
+INFO:mininet:
+
+INFO:mininet:*** Starting 4 switches
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:...
+INFO:mininet:
+
+Level 25:mininet:h1
+Level 25:mininet: h1-eth0:
+Level 25:mininet:s1-eth3
+Level 25:mininet:
+
+Level 25:mininet:h2
+Level 25:mininet: h2-eth0:
+Level 25:mininet:s1-eth4
+Level 25:mininet:
+
+Level 25:mininet:h3
+Level 25:mininet: h3-eth0:
+Level 25:mininet:s4-eth3
+Level 25:mininet:
+
+Level 25:mininet:h4
+Level 25:mininet: h4-eth0:
+Level 25:mininet:s4-eth4
+Level 25:mininet:
+
+Level 25:mininet:h5
+Level 25:mininet: h5-eth0:
+Level 25:mininet:s3-eth3
+Level 25:mininet:
+
+Level 25:mininet:h6
+Level 25:mininet: h6-eth0:
+Level 25:mininet:s1-eth5
+Level 25:mininet:
+
+Level 25:mininet:h7
+Level 25:mininet: h7-eth0:
+Level 25:mininet:s2-eth3
+Level 25:mininet:
+
+Level 25:mininet:h8
+Level 25:mininet: h8-eth0:
+Level 25:mininet:s4-eth5
+Level 25:mininet:
+
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['4.05 Mbits/sec', '4.82 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.68 Mbits/sec', '4.35 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.79 Mbits/sec', '4.75 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['3.48 Mbits/sec', '4.66 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['3.75 Mbits/sec', '4.76 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.76 Mbits/sec', '4.71 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.67 Mbits/sec', '4.22 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['3.65 Mbits/sec', '4.78 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+INFO:root:"GET /changeScenario/?data=scenario1 HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['1.76 Mbits/sec', '2.23 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['1.69 Mbits/sec', '2.55 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['1.76 Mbits/sec', '2.54 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['1.67 Mbits/sec', '2.21 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:h6 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:h5 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h5 and h6 
+
+Level 25:mininet:*** Results: ['2.53 Mbits/sec', '4.04 Mbits/sec']
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['1.72 Mbits/sec', '2.70 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['1.74 Mbits/sec', '2.70 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['1.73 Mbits/sec', '2.55 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['1.73 Mbits/sec', '2.70 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:h6 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:h5 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h5 and h6 
+
+Level 25:mininet:*** Results: ['2.59 Mbits/sec', '3.34 Mbits/sec']
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+INFO:root:"GET /changeScenario/?data=scenario3 HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['1.76 Mbits/sec', '2.54 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['1.74 Mbits/sec', '2.49 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['1.73 Mbits/sec', '2.31 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['1.71 Mbits/sec', '2.43 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:h6 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:h5 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h5 and h6 
+
+Level 25:mininet:*** Results: ['2.50 Mbits/sec', '3.29 Mbits/sec']
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:h8 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:h7 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h7 and h8 
+
+Level 25:mininet:*** Results: ['2.98 Mbits/sec', '4.10 Mbits/sec']
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+INFO:mininet:*** Stopping 1 controllers
+
+INFO:mininet:c0 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 12 links
+
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:.
+INFO:mininet:
+
+INFO:mininet:*** Stopping 4 switches
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:
+
+INFO:mininet:*** Stopping 8 hosts
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+*** Done
+
+INFO:mininet:Connecting to remote controller at 127.0.0.1:6653
+
+INFO:mininet:*** Creating network
+
+INFO:mininet:*** Adding controller
+
+INFO:mininet:*** Adding hosts:
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+*** Adding switches:
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:
+*** Adding links:
+
+INFO:mininet:(h1, s1) 
+INFO:mininet:(h2, s1) 
+INFO:mininet:(h3, s4) 
+INFO:mininet:(h4, s4) 
+INFO:mininet:(h5, s3) 
+INFO:mininet:(h6, s1) 
+INFO:mininet:(h7, s2) 
+INFO:mininet:(h8, s4) 
+INFO:mininet:(s1, s2) 
+INFO:mininet:(s1, s3) 
+INFO:mininet:(s2, s4) 
+INFO:mininet:(s3, s4) 
+INFO:mininet:
+
+INFO:mininet:*** Configuring hosts
+
+INFO:mininet:h1 
+INFO:mininet:h2 
+INFO:mininet:h3 
+INFO:mininet:h4 
+INFO:mininet:h5 
+INFO:mininet:h6 
+INFO:mininet:h7 
+INFO:mininet:h8 
+INFO:mininet:
+
+INFO:mininet:*** Starting controller
+
+INFO:mininet:c0 
+INFO:mininet:
+
+INFO:mininet:*** Starting 4 switches
+
+INFO:mininet:s1 
+INFO:mininet:s2 
+INFO:mininet:s3 
+INFO:mininet:s4 
+INFO:mininet:...
+INFO:mininet:
+
+Level 25:mininet:h1
+Level 25:mininet: h1-eth0:
+Level 25:mininet:s1-eth3
+Level 25:mininet:
+
+Level 25:mininet:h2
+Level 25:mininet: h2-eth0:
+Level 25:mininet:s1-eth4
+Level 25:mininet:
+
+Level 25:mininet:h3
+Level 25:mininet: h3-eth0:
+Level 25:mininet:s4-eth3
+Level 25:mininet:
+
+Level 25:mininet:h4
+Level 25:mininet: h4-eth0:
+Level 25:mininet:s4-eth4
+Level 25:mininet:
+
+Level 25:mininet:h5
+Level 25:mininet: h5-eth0:
+Level 25:mininet:s3-eth3
+Level 25:mininet:
+
+Level 25:mininet:h6
+Level 25:mininet: h6-eth0:
+Level 25:mininet:s1-eth5
+Level 25:mininet:
+
+Level 25:mininet:h7
+Level 25:mininet: h7-eth0:
+Level 25:mininet:s2-eth3
+Level 25:mininet:
+
+Level 25:mininet:h8
+Level 25:mininet: h8-eth0:
+Level 25:mininet:s4-eth5
+Level 25:mininet:
+
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['3.68 Mbits/sec', '5.04 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.57 Mbits/sec', '4.23 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.67 Mbits/sec', '5.07 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['3.72 Mbits/sec', '5.20 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['3.92 Mbits/sec', '5.11 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.74 Mbits/sec', '4.83 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.64 Mbits/sec', '4.28 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['3.76 Mbits/sec', '4.38 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['4.02 Mbits/sec', '4.62 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.72 Mbits/sec', '4.79 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.88 Mbits/sec', '4.76 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['3.79 Mbits/sec', '4.55 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['3.95 Mbits/sec', '5.17 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.64 Mbits/sec', '4.45 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.91 Mbits/sec', '4.49 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['3.72 Mbits/sec', '4.62 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['3.98 Mbits/sec', '4.83 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.72 Mbits/sec', '4.67 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.78 Mbits/sec', '4.65 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['3.75 Mbits/sec', '4.49 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['3.74 Mbits/sec', '4.49 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.82 Mbits/sec', '4.97 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.81 Mbits/sec', '4.48 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['3.88 Mbits/sec', '4.51 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+INFO:root:"GET //get/throughput/udp/ HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['3.96 Mbits/sec', '4.84 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.78 Mbits/sec', '4.74 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.88 Mbits/sec', '4.69 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['3.79 Mbits/sec', '4.83 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+INFO:root:"GET //get/throughput/udp/ HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['3.81 Mbits/sec', '4.58 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.95 Mbits/sec', '5.08 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.72 Mbits/sec', '4.45 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['3.81 Mbits/sec', '5.09 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+INFO:root:"GET //get/throughput/udp/ HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['3.89 Mbits/sec', '4.63 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['4.06 Mbits/sec', '5.09 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.97 Mbits/sec', '4.78 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['3.82 Mbits/sec', '4.47 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+INFO:root:"GET //get/throughput/udp/ HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['3.79 Mbits/sec', '4.45 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.92 Mbits/sec', '4.64 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.91 Mbits/sec', '4.59 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['3.75 Mbits/sec', '4.57 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['10M', '9.74 Mbits/sec', '9.74 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['10M', '9.75 Mbits/sec', '9.75 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+INFO:root:"GET /get/throughput/udp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['3.90 Mbits/sec', '4.68 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.77 Mbits/sec', '4.88 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.81 Mbits/sec', '4.34 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['3.77 Mbits/sec', '4.59 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+INFO:root:"GET /get/throughput/udp/ HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['3.80 Mbits/sec', '4.46 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.68 Mbits/sec', '4.64 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['4.10 Mbits/sec', '4.66 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['3.78 Mbits/sec', '4.53 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+INFO:root:"GET /get/throughput/udp/ HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['3.85 Mbits/sec', '4.95 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.78 Mbits/sec', '4.62 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.91 Mbits/sec', '4.48 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['3.76 Mbits/sec', '4.58 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['10M', '9.73 Mbits/sec', '9.73 Mbits/sec']
+
+INFO:root:"GET /get/throughput/udp/ HTTP/1.1" 200 -
+INFO:root:"GET /changeScenario/?data=scenario3 HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['1.68 Mbits/sec', '2.58 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['1.69 Mbits/sec', '2.41 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['1.71 Mbits/sec', '2.19 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['1.66 Mbits/sec', '2.47 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:h6 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:h5 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h5 and h6 
+
+Level 25:mininet:*** Results: ['2.55 Mbits/sec', '3.75 Mbits/sec']
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:h8 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:h7 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h7 and h8 
+
+Level 25:mininet:*** Results: ['3.00 Mbits/sec', '4.31 Mbits/sec']
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['10M', '2.59 Mbits/sec', '2.59 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['10M', '2.57 Mbits/sec', '2.57 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['10M', '2.60 Mbits/sec', '2.60 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['10M', '2.64 Mbits/sec', '2.64 Mbits/sec']
+
+INFO:root:"GET /get/throughput/udp/ HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+INFO:root:"GET /changeScenario/?data=scenario3 HTTP/1.1" 200 -
+INFO:root:"GET /webapp/ HTTP/1.1" 200 -
+INFO:root:"GET /favicon.ico HTTP/1.1" 200 -
+INFO:root:"GET /changeScenario/?data=scenario3 HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['1.72 Mbits/sec', '2.43 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['1.73 Mbits/sec', '2.59 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['1.64 Mbits/sec', '2.44 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['1.66 Mbits/sec', '2.39 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:h6 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:h5 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h5 and h6 
+
+Level 25:mininet:*** Results: ['2.59 Mbits/sec', '3.33 Mbits/sec']
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:h8 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:h7 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h7 and h8 
+
+Level 25:mininet:*** Results: ['2.96 Mbits/sec', '3.72 Mbits/sec']
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['10M', '2.63 Mbits/sec', '2.63 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['10M', '2.60 Mbits/sec', '2.60 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['10M', '2.52 Mbits/sec', '2.52 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['10M', '2.54 Mbits/sec', '2.54 Mbits/sec']
+
+INFO:root:"GET /get/throughput/udp/ HTTP/1.1" 200 -
+INFO:root:"GET /changeScenario/?data=scenario2 HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 50% dropped (1/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['4.30 Mbits/sec', '5.19 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['3.82 Mbits/sec', '4.46 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['3.74 Mbits/sec', '4.63 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['3.67 Mbits/sec', '4.39 Mbits/sec']
+
+Level 25:mininet:h5 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:h6 -> 
+Level 25:mininet:X 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 100% dropped (0/2 received)
+
+Level 25:mininet:h7 -> 
+Level 25:mininet:h8 
+Level 25:mininet:
+
+Level 25:mininet:h8 -> 
+Level 25:mininet:h7 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing TCP bandwidth between h7 and h8 
+
+Level 25:mininet:*** Results: ['2.91 Mbits/sec', '3.65 Mbits/sec']
+
+INFO:root:"GET /get/throughput/tcp/ HTTP/1.1" 200 -
+Level 25:mininet:h1 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h3 
+
+Level 25:mininet:*** Results: ['10M', '2.87 Mbits/sec', '2.87 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h4 
+
+Level 25:mininet:*** Results: ['10M', '2.86 Mbits/sec', '2.86 Mbits/sec']
+
+Level 25:mininet:h1 -> 
+Level 25:mininet:h4 
+Level 25:mininet:
+
+Level 25:mininet:h4 -> 
+Level 25:mininet:h1 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h1 and h4 
+
+Level 25:mininet:*** Results: ['10M', '2.88 Mbits/sec', '2.88 Mbits/sec']
+
+Level 25:mininet:h2 -> 
+Level 25:mininet:h3 
+Level 25:mininet:
+
+Level 25:mininet:h3 -> 
+Level 25:mininet:h2 
+Level 25:mininet:
+
+Level 25:mininet:*** Results: 0% dropped (2/2 received)
+
+Level 25:mininet:*** Iperf: testing UDP bandwidth between h2 and h3 
+
+Level 25:mininet:*** Results: ['10M', '2.90 Mbits/sec', '2.90 Mbits/sec']
+
+INFO:root:"GET /get/throughput/udp/ HTTP/1.1" 200 -

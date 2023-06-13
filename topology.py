@@ -132,7 +132,7 @@ def mapNetworkScenariosTcp(net: Mininet, host_pairs: list = [["h1","h3"],["h2","
         result = net.ping([h1,h2],timeout="0.5")
 
         if result < 100:
-            host1_speed,host2_speed = net.iperf(hosts=[h1, h2], seconds=2) # Host connected, testing bandwidth
+            host1_speed,host2_speed = net.iperf(hosts=[h1, h2], seconds=2) # Host connected, testing bandwidt
         else:
             host1_speed = "-"
             host2_speed = "-"
@@ -151,8 +151,11 @@ def mapNetworkScenariosTcp(net: Mininet, host_pairs: list = [["h1","h3"],["h2","
                 "speed": host2_speed
             }
         })
-    
+
     return json.dumps(network_map)
+
+
+    
 
 def pingall(net: Mininet)->str:
     network :dict= {"h1": {},"h2":{},"h3":{},"h4":{},"h5": {},"h6":{},"h7":{},"h8":{}}
