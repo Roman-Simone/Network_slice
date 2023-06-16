@@ -21,7 +21,7 @@ The network topology is organized as follow:
 
 In this scenario, there are four hosts and four switches. The four hosts are connected with two service slices. One slice is for Video transmission (UDP protocol) and use switches: `s1-s2-s4` with a maximum bandwith of 10 Mbits/sec. The other' slice is for No-Video transmission (TCP and ICMP protocols) and use switches: `s1-s3-s4` with a maximum bandwith of 8 Mbits/sec.
 
-![](https://github.com/Sro552/network_slice/tree/main/images#:~:text=Scenario_0_Lower.png)
+![](images/Scenario_0_Lower.png)
 
 
 
