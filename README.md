@@ -31,10 +31,6 @@ The command `pingall` in mininet test connectivity between all hosts in a networ
 
 <img src="Extra/Pingall-default.png" alt="wi" style="width:30%;" />
 
-In addition, to verify the accuracy of the network bandwidth, you can check the bandwidth  between two hosts via `iperf <host1> <host2>` command and b.
-
-
-
 # Scenario 2 - Lower
 
 In this scenario, there are six hosts and four switches. Hosts `h1-h2-h3-h4` are connected with two service slices, while hosts `h5-h6` are connected with a topology slice. The slice for Video transmission (UDP protocol) uses a maximum bandwidth of 10 Mbit/sec. However, now the slice for no-Video (TCP and ICMP protocols) has to share the bandwidth with the topology slice, therefore the service slice no-Video take a maximum bandwidth of 3 Mbit/sec and topology slice take a maximum bandwidth of 5 Mbit/sec.
@@ -43,9 +39,7 @@ In this scenario, there are six hosts and four switches. Hosts `h1-h2-h3-h4` are
 
 The command `pingall` in mininet test connectivity between all hosts in a network. In this scenario we can see that the four host `h1-h2-h3-h4` can see each other and also the couple `h5-h6`.
 
-![](Extra/Pingall-lower.png)
-
-
+<img src="Extra/Pingall-lower.png" alt="wi" style="width:30%;" />
 
 # Scenario 3 - Upper
 
@@ -55,11 +49,9 @@ In this scenario, there are six hosts and four switches. Hosts `h1-h2-h3-h4` are
 
 
 
-The command `pingall` in mininet test connectivity between all hosts in a network. In this scenario we can see that the four host `h1-h2-h3-h4` can see each other and also the couple `h7-h8`.
+aThe command `pingall` in mininet test connectivity between all hosts in a network. In this scenario we can see that the four host `h1-h2-h3-h4` can see each other and also the couple `h7-h8`.
 
-<img src="Extra/Pingall-Upper.png" alt="wid" style="zoom:70%;" />
-
-
+<img src="Extra/Pingall-Upper.png" alt="wid" style="width:30%;" />
 
 # Scenario 4 - Total
 
@@ -69,11 +61,31 @@ In this scenario, there are all the eight hosts and four switches. Hosts `h1-h2-
 
 The command `pingall` in mininet test connectivity between all hosts in a network. In this scenario we can see that the four host `h1-h2-h3-h4` can see each other and also the couple `h5-h6` and `h7-h8`.
 
-
+<img src="Extra/Pingall-Total.png" alt="wid" style="width:30%;" />
 
 # Run the demo
 
 Firstly install the virtual machine, follow the instruction available at this [link](https://www.granelli-lab.org/researches/relevant-projects/comnetsemu-labs).
 
+To run this demo, follow these steps:
 
+1. Open the first terminal window for the controller.
+2. Start the network controller by running the following command:
+
+```
+ryu-manager controller.py
+```
+
+​		Ensure that the `controller.py` file is in the same directory or provide the correct path 		to the file.
+
+3.  Keep the first terminal window open and running to maintain the network controller.
+
+4. Open the second terminal window for the rest of the network, and start the network by running the following command:
+
+   ```
+   sudo python3 topology.py
+   ```
+
+
+5. After initialization, you will be presented with a menu in the second terminal window. This menu will provide options to interact with the network and perform various actions.
 
