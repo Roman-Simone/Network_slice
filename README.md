@@ -65,7 +65,7 @@ The command `pingall` in mininet test connectivity between all hosts in a networ
 
 # Run the demo
 
-Firstly install the virtual machine, follow the instruction available at this [link](https://www.granelli-lab.org/researches/relevant-projects/comnetsemu-labs).
+Firstly, install the virtual machine, follow the instruction available at this [link](https://www.granelli-lab.org/researches/relevant-projects/comnetsemu-labs).
 
 To run this demo, follow these steps:
 
