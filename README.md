@@ -70,13 +70,14 @@ Firstly install the virtual machine, follow the instruction available at this [l
 To run this demo, follow these steps:
 
 1. Open the first terminal window for the controller.
+
 2. Start the network controller by running the following command:
 
-```
-ryu-manager controller.py
-```
+   ```
+   ryu-manager controller.py
+   ```
 
-​		Ensure that the `controller.py` file is in the same directory or provide the correct path 		to the file.
+   Ensure that the `controller.py` file is in the same directory or provide the correct path to the file.
 
 3.  Keep the first terminal window open and running to maintain the network controller.
 
