@@ -29,7 +29,7 @@ In this scenario, there are four hosts and four switches. The four hosts are con
 
 The command `pingall` in mininet test connectivity between all hosts in a network. In this scenario we can see that only the four host `h1-h2-h3-h4` can see each other.
 
-<img src="Extra/Pingall-default.png" alt="wi" style="zoom:50%;" />
+<img src="Extra/Pingall-default.png" alt="wi" style="width:50%;" />
 
 In addition, to verify the accuracy of the network bandwidth, you can check the bandwidth  between two hosts via `iperf <host1> <host2>` command and b.
 
