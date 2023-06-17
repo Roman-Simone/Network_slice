@@ -38,7 +38,7 @@ class MyHandler(BaseHTTPRequestHandler):
             self.end_headers()
 
             # Read the HTML file
-            with open('webapp.html', 'r') as file:
+            with open('WebApp/webapp.html', 'r') as file:
                 html_content = file.read()
 
             self.wfile.write(html_content.encode('utf-8'))
