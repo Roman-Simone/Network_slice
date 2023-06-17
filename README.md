@@ -35,7 +35,7 @@ The command `pingall` in mininet test connectivity between all hosts in a networ
 
 In this scenario, there are six hosts and four switches. Hosts `h1-h2-h3-h4` are connected with two service slices, while hosts `h5-h6` are connected with a topology slice. The slice for Video transmission (UDP protocol) uses a maximum bandwidth of 10 Mbit/sec. However, now the slice for no-Video (TCP and ICMP protocols) has to share the bandwidth with the topology slice, therefore the service slice no-Video take a maximum bandwidth of 3 Mbit/sec and topology slice take a maximum bandwidth of 5 Mbit/sec.
 
-<img src="WebApp/images/Scenario_1_Lower.png" alt="wi" style="width:80%;" />alt="wid" style="width:70%;" />
+<img src="WebApp/images/Scenario_1_Lower.png" alt="wid" style="width:70%;" />
 
 The command `pingall` in mininet test connectivity between all hosts in a network. In this scenario we can see that the four host `h1-h2-h3-h4` can see each other and also the couple `h5-h6`.
 
