@@ -39,7 +39,7 @@ In this scenario, there are six hosts and four switches. Hosts `h1-h2-h3-h4` are
 
 The command `pingall` in mininet test connectivity between all hosts in a network. In this scenario we can see that the four host `h1-h2-h3-h4` can see each other and also the couple `h5-h6`.
 
-<img src="Extra/Pingall-lower.png" alt="wi" style="width:30%;" />
+<img src="Extra/Pingall-Lower.png" alt="wi" style="width:30%;" />
 
 # Scenario 3 - Upper
 
