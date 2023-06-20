@@ -339,5 +339,3 @@ except Exception as e:
     httpd.shutdown()
 
     net.stop()
-
-    

@@ -8,12 +8,6 @@ printf "[INFO] Loading Scenario Default \n"
 
 printf "[INFO] Setting up switches...\n\n"
 
-# # Delete all flow entries on Open vSwitch (OVS) bridges
-# for bridge in $(sudo ovs-vsctl list-br)
-# do
-#     sudo ovs-ofctl del-flows $bridge
-# done
-
 # Switch 1
 printf "Switch 1\n"
 sudo ovs-vsctl -- \
@@ -64,15 +58,6 @@ printf "\n[INFO] Creating links..."
 # Switch 1
 sudo ovs-ofctl add-flow s1 cookie=0x0,duration=70.374s,table=0,n_packets=22,n_bytes=1596,priority=0,actions=CONTROLLER:65535
 
-# sudo ovs-ofctl add-flow s1 ip,priority=65500,in_port=3,idle_timeout=0,actions=set_queue:12,output:1
-# sudo ovs-ofctl add-flow s1 ip,priority=65500,in_port=1,idle_timeout=0,actions=set_queue:12,output:3
-
-# sudo ovs-ofctl add-flow s1 ip,priority=65500,in_port=5,idle_timeout=0,actions=drop
-
-# sudo ovs-ofctl add-flow s1 ip,priority=65500,in_port=4,idle_timeout=0,actions=set_queue:34,output:2
-# sudo ovs-ofctl add-flow s1 ip,priority=65500,in_port=2,idle_timeout=0,actions=set_queue:34,output:4
-
-# sudo ovs-ofctl add-flow s1 ip,priority=65500,in_port=6,idle_timeout=0,actions=drop
 
 # Switch 2
 sudo ovs-ofctl add-flow s2 table=0,priority=65500,in_port=1,idle_timeout=0,actions=set_queue:12,output:2
@@ -88,14 +73,5 @@ sudo ovs-ofctl add-flow s3 cookie=0x0,duration=70.374s,table=0,n_packets=22,n_by
 # Switch 4
 sudo ovs-ofctl add-flow s4 cookie=0x0,duration=70.374s,table=0,n_packets=22,n_bytes=1596,priority=0,actions=CONTROLLER:65535
 
-# sudo ovs-ofctl add-flow s4 ip,priority=65500,in_port=1,idle_timeout=0,actions=set_queue:12,output:3
-# sudo ovs-ofctl add-flow s4 ip,priority=65500,in_port=3,idle_timeout=0,actions=set_queue:12,output:1
-
-# sudo ovs-ofctl add-flow s4 ip,priority=65500,in_port=5,idle_timeout=0,actions=drop
-
-# sudo ovs-ofctl add-flow s4 ip,priority=65500,in_port=2,idle_timeout=0,actions=set_queue:34,output:4
-# sudo ovs-ofctl add-flow s4 ip,priority=65500,in_port=4,idle_timeout=0,actions=set_queue:34,output:2
-
-# sudo ovs-ofctl add-flow s4 ip,priority=65500,in_port=6,idle_timeout=0,actions=drop
 
 printf "OK\n\n"
