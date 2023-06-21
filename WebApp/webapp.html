@@ -3,6 +3,165 @@
 
 <head>
     <title>Network Slicing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #222;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 36px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #444;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #555;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .not-available {
+            color: red;
+        }
+
+        .card-header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .card {
+            background-color: #444;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .list-group-item {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 10px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+        }
+
+        .button-bar {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button-bar button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body onload="eseguiAllAperturaPagina()">
+
+    <div class="container">
+        <h1 class="display-4">NETWORKING II Project</h1>
+        <h2 class="h4 text-uppercase">
+            <center>developed by S. Roman, S. Bonetto and M. Rigon</center>
+        </h2>
+        <br>
+        <br>
+        <div id="output" class="row"></div>
+
+        <div class="button-bar">
+            <button id="defaultBtn" class="btn btn-dark active" onclick="changeScenario('default')">Scenario Default</button>
+            <button id="scenario1Btn" class="btn btn-dark" onclick="changeScenario('scenario1')">Scenario Lower</button>
+            <button id="scenario2Btn" class="btn btn-dark" onclick="changeScenario('scenario2')">Scenario Higher</button>
+            <button id="scenario3Btn" class="btn btn-dark" onclick="changeScenario('scenario3')">Scenario Total</button>
+            <button id="refresh3Btn" class="btn btn-light" onclick="refreshAll()">Refresh Throughputs</button>
+        </div>
+
+        <div id="scenario_image" class="image-container">
+            <img src="https://raw.githubusercontent.com/Sro552/network_slice/main/WebApp/images/Scenario_0_Lower.png" alt="Scenario Image">
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <table class="table table-borderless text-center">
+              <thead class="thead-dark">
+                <tr>
+                  <th class="text-white">Nome</th>
+                  <th class="text-white">Matricola</th>
+                  <th class="text-white">Github</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td class="text-white">Bonetto Stefano</td>
+                    <td class="text-white">217861</td>
+                    <td><a href="https://github.com/stefanoobonetto"  >github.com/stefanoobonetto</a></td>
+                </tr>
+                <tr>
+                    <td class="text-white">Rigon Mattia</td>
+                    <td class="text-white">217868</td>
+                    <td><a href="https://github.com/MattiaRigon"  >github.com/MattiaRigon</a></td>
+                </tr>
+                <tr>
+                    <td class="text-white">Roman Simone</td>
+                    <td class="text-white">218788</td>
+                    <td><a href="https://github.com/Sro552"  >github.com/Sro552</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>          
+    </div>
+
+
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Network Slicing</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -318,64 +477,64 @@
 
             output += "<div class='col-md-6'>";
             output += "<div class='card mb-4'>";
-            output += "<div class='card-header'><center><b>" + host1 + " ---> " + host2 + "</b></center></div>";
+            output += "<div class='card-header'><center><b>" + host1 + " ---- " + host2 + "</b></center></div>";
             output += "<table class='table'>";
             
             
-            if(host1 == "h1" && host2== "h3" || host1 == "h1" && host2== "h4" || host1 == "h2" && host2== "h4" || host1 == "h2" && host2== "h3"){
-                output += "<thead><tr><th>Host</th><th>Speed (TCP)</th><th>Speed (UDP)</th></tr></thead>";
-                output += "<tbody>";
-                output += "<tr><td class=\"text-white\">" + host1 + "</td><td id=\"speed1_"+i+"\" class=\"text-white\">" + speed1 + "</td><td id=\"speed1UDP_"+i+"\" class=\"text-white\">" + speed1UDP + "</td></tr>";
-                output += "<tr><td class=\"text-white\">" + host2 + "</td><td id=\"speed2_"+i+"\" class=\"text-white\">" + speed2 + "</td><td id=\"speed2UDP_"+i+"\" class=\"text-white\">" + speed2UDP + "</td></tr>";
+                if(host1 == "h1" && host2== "h3" || host1 == "h1" && host2== "h4" || host1 == "h2" && host2== "h4" || host1 == "h2" && host2== "h3"){
+                    output += "<thead><tr><th>Host</th><th>Speed (TCP)</th><th>Speed (UDP)</th></tr></thead>";
+                    output += "<tbody>";
+                    output += "<tr><td class=\"text-white\">" + host1 + "</td><td id=\"speed1_"+i+"\" class=\"text-white\">" + speed1 + "</td><td id=\"speed1UDP_"+i+"\" class=\"text-white\">" + speed1UDP + "</td></tr>";
+                    output += "<tr><td class=\"text-white\">" + host2 + "</td><td id=\"speed2_"+i+"\" class=\"text-white\">" + speed2 + "</td><td id=\"speed2UDP_"+i+"\" class=\"text-white\">" + speed2UDP + "</td></tr>";
+                }
+                else {
+                    output += "<thead><tr><th>Host</th><th>Speed (TCP)</tr></thead>";
+                    output += "<tbody>";
+                    output += "<tr><td class=\"text-white\">" + host1 + "</td><td id=\"speed1_"+i+"\" class=\"text-white\">" + speed1 + "</td></tr>";
+                    output += "<tr><td class=\"text-white\">" + host2 + "</td><td id=\"speed2_"+i+"\" class=\"text-white\">" + speed2 + "</td></tr>";
+                } 
+                
+                output += "</tbody>";
+                output += "</table>";
+                output += "</div>";
+                output += "</div>";
             }
-            else {
-                output += "<thead><tr><th>Host</th><th>Speed (TCP)</tr></thead>";
-                output += "<tbody>";
-                output += "<tr><td class=\"text-white\">" + host1 + "</td><td id=\"speed1_"+i+"\" class=\"text-white\">" + speed1 + "</td></tr>";
-                output += "<tr><td class=\"text-white\">" + host2 + "</td><td id=\"speed2_"+i+"\" class=\"text-white\">" + speed2 + "</td></tr>";
-            } 
+    
+            document.getElementById("output").innerHTML = output;
+    
+            function sendRequest(requestName) {
+                switch (requestName) {
+                    case 'default':
+                        // invio richiesta HTML per attivazione scenario default
+                        var image = document.querySelector('#scenario_image img');
+                        image.src = "https://raw.githubusercontent.com/Sro552/network_slice/main/WebApp/images/Scenario_0_Lower.png";
+                        console.log('Scenario default selezionato');
+    
+                        break;
+                    case 'scenario1':
+                        // invio richiesta HTML per attivazione scenario lower
+                        var image = document.querySelector('#scenario_image img');
+                        image.src = "https://github.com/Sro552/network_slice/blob/main/WebApp/images/Scenario_1_Lower.png?raw=true";
+                        console.log('Scenario lower selezionato');
+                        break;
+                    case 'scenario2':
+                         // invio richiesta HTML per attivazione scenario higher
+                        var image = document.querySelector('#scenario_image img');
+                        image.src = "https://github.com/Sro552/network_slice/blob/main/WebApp/images/Scenario_2_Upper.png?raw=true";
+                        console.log('Scenario higher selezionato');
+                        break;
+                    case 'scenario3':
+                        // invio richiesta HTML per attivazione scenario total
+                        var image = document.querySelector('#scenario_image img');
+                        image.src = "https://github.com/Sro552/network_slice/blob/main/WebApp/images/Scenario_3_Total.png?raw=true";
+                        console.log('Scenario total selezionato');
+                        break;
+                    default:
+                        console.log('Errore nella richiesta');
+                }
+            }
             
-            output += "</tbody>";
-            output += "</table>";
-            output += "</div>";
-            output += "</div>";
-        }
-
-        document.getElementById("output").innerHTML = output;
-
-        function sendRequest(requestName) {
-            switch (requestName) {
-                case 'default':
-                    // invio richiesta HTML per attivazione scenario default
-                    var image = document.querySelector('#scenario_image img');
-                    image.src = "https://raw.githubusercontent.com/Sro552/network_slice/main/WebApp/images/Scenario_0_Lower.png";
-                    console.log('Scenario default selezionato');
-
-                    break;
-                case 'scenario1':
-                    // invio richiesta HTML per attivazione scenario lower
-                    var image = document.querySelector('#scenario_image img');
-                    image.src = "https://github.com/Sro552/network_slice/blob/main/WebApp/images/Scenario_1_Lower.png?raw=true";
-                    console.log('Scenario lower selezionato');
-                    break;
-                case 'scenario2':
-                     // invio richiesta HTML per attivazione scenario higher
-                    var image = document.querySelector('#scenario_image img');
-                    image.src = "https://github.com/Sro552/network_slice/blob/main/WebApp/images/Scenario_2_Upper.png?raw=true";
-                    console.log('Scenario higher selezionato');
-                    break;
-                case 'scenario3':
-                    // invio richiesta HTML per attivazione scenario total
-                    var image = document.querySelector('#scenario_image img');
-                    image.src = "https://github.com/Sro552/network_slice/blob/main/WebApp/images/Scenario_3_Total.png?raw=true";
-                    console.log('Scenario total selezionato');
-                    break;
-                default:
-                    console.log('Errore nella richiesta');
-            }
-        }
-        
-    </script>
-</body>
-
-</html>
+        </script>
+    </body>
+    
+    </html> -->
