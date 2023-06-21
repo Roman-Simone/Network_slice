@@ -96,3 +96,15 @@ To run this demo, follow these steps:
 
 5. After initialization, you will be presented with a menu in the second terminal window. This menu will provide options to interact with the network and perform various actions.
 
+# Other resources
+[Here](https://docs.google.com/presentation/d/1P4L3OXiTjbjbKXjkgbwRyr3ogbSTaADz2g9WrZwvQgw/edit?usp=sharing) you can find the presentation of the project.
+
+You can contact us:
+
+| Team Member | Contacts | GitHub |
+| --------- | --------- | --------- |
+|  Stefano Bonetto   | stefano.bonetto@studenti.unitn.it    | [github.com/stefanoobonetto](https://github.com/stefanoobonetto)    |
+| Simone Roman    | simone.roman@studenti.unitn.it    | [github.com/Sro553](https://github.com/Sro552)    |
+| Mattia Rigon    | mattia.rigon@studenti.unitn.it    | [github.com/MattiaRigon](https://github.com/MattiaRigon)    |
+
+
