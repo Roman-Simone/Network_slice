@@ -17,8 +17,8 @@ set port s1-eth2 qos=@newqos -- \
 other-config:max-rate=200000000 \
 queues:12=@1q \
 queues:34=@2q -- \
---id=@1q create queue other-config:min-rate=1000000 other-config:max-rate=10000000 -- \
---id=@2q create queue other-config:min-rate=1000000 other-config:max-rate=8000000
+--id=@1q create queue other-config:min-rate=10000000 other-config:max-rate=100000000 -- \
+--id=@2q create queue other-config:min-rate=10000000 other-config:max-rate=80000000
 
 # Switch 2
 printf "\nSwitch 2\n"
@@ -28,7 +28,7 @@ set port s2-eth2 qos=@newqos -- \
 --id=@newqos create QoS type=linux-htb \
 other-config:max-rate=200000000 \
 queues:12=@1q -- \
---id=@1q create queue other-config:min-rate=1000000 other-config:max-rate=10000000
+--id=@1q create queue other-config:min-rate=10000000 other-config:max-rate=100000000
 
 # Switch 3
 printf "\nSwitch 3\n"
@@ -38,7 +38,7 @@ set port s3-eth2 qos=@newqos -- \
 --id=@newqos create QoS type=linux-htb \
 other-config:max-rate=200000000 \
 queues:12=@1q -- \
---id=@1q create queue other-config:min-rate=1000000 other-config:max-rate=8000000
+--id=@1q create queue other-config:min-rate=10000000 other-config:max-rate=80000000
 
 # Switch 4
 printf "\nSwitch 4\n"
@@ -49,8 +49,8 @@ set port s4-eth2 qos=@newqos -- \
 other-config:max-rate=200000000 \
 queues:12=@1q \
 queues:34=@1q -- \
---id=@1q create queue other-config:min-rate=1000000 other-config:max-rate=10000000 -- \
---id=@2q create queue other-config:min-rate=1000000 other-config:max-rate=8000000
+--id=@1q create queue other-config:min-rate=10000000 other-config:max-rate=100000000 -- \
+--id=@2q create queue other-config:min-rate=10000000 other-config:max-rate=80000000
 
 # Creating links
 printf "\n[INFO] Creating links..."

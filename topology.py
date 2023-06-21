@@ -209,7 +209,7 @@ def mapNetworkScenariosUdp(net: Mininet, host_pairs: list = [["h1","h3"],["h2","
         result = net.ping([h1,h2],timeout="0.5")
 
         if result < 100:
-            iperf_result = net.iperf(hosts=[h1, h2],l4Type="UDP",seconds=2) # Host connected, testing bandwidth
+            iperf_result = net.iperf(hosts=[h1, h2],udpBw="100M",l4Type="UDP",seconds=2) # Host connected, testing bandwidth
             host1_speed = iperf_result[1]
             host2_speed = iperf_result[2]
         else:
