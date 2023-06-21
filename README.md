@@ -17,6 +17,8 @@
 - [Scenario 4 - Total](#scenario-1---Total)
 - [Run the demo](#Run-the-demo)
 - [Other resources](#Other-resources)
+
+
 # Introduction
 
 The objective of this project is to develop a network slicing method that allows for the flexible activation and deactivation of network slices using command line interface (CLI) or graphical user interface (GUI) commands. To accomplish this objective, five scenarios have been suggested, all utilizing the same network structure. The aim is to examine the network's behavior when various components of the network undergo minor or major modifications.
@@ -89,9 +91,32 @@ Using iperf we can check the bandwidth among the hosts:
 
 <img src="Extra/TCP_total.png" alt="wi" style="width:30%;" />
 <img src="Extra/UDP_total.png" alt="wi" style="width:48%;" />
-# Run the demo
+
+
+
+## Setup the virtual machine
 
 Firstly, install the virtual machine, follow the instruction available at this [link](https://www.granelli-lab.org/researches/relevant-projects/comnetsemu-labs).
+
+In order to be able to see the webapp in your favourite browser you need to create a private network between the Virtual Machine and your local machine. To achieve this you have to:
+
+1. Go to comnetsemu installation folder
+
+```BASH
+~$ cd <comnetsemu_location>
+```
+
+2. Once you are in the directory you can perform an `ls` and you should see the `Vagrantfile`. From here open it with your favourite text editor and copy this line in the file to create the private network
+
+```BASH
+config.vm.network "private_network", ip: "192.168.56.2"
+```
+
+Now this ip address is assigned to the vagrant machine and now we can see the visualizer through the browser.
+
+
+# Run the demo
+
 
 To run this demo, follow these steps:
 
