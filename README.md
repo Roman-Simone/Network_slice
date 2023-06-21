@@ -37,6 +37,12 @@ The command `pingall` in mininet test connectivity between all hosts in a networ
 
 <img src="Extra/Pingall-default.png" alt="wi" style="width:30%;" />
 
+Using iperf we can check the bandwidth among the hosts:
+
+<img src="Extra/TCP_default.png" alt="wi" style="width:30%;" />
+<img src="Extra/UDP_default.png" alt="wi" style="width:38.7%;" />
+
+
 # Scenario 2 - Lower
 
 In this scenario, there are six hosts and four switches. Hosts `h1-h2-h3-h4` are connected with two service slices, while hosts `h5-h6` are connected with a topology slice. The slice for Video transmission (UDP protocol) uses a maximum bandwidth of 10 Mbit/sec. However, now the slice for no-Video (TCP and ICMP protocols) has to share the bandwidth with the topology slice, therefore the service slice no-Video take a maximum bandwidth of 3 Mbit/sec and topology slice take a maximum bandwidth of 5 Mbit/sec.
@@ -46,6 +52,11 @@ In this scenario, there are six hosts and four switches. Hosts `h1-h2-h3-h4` are
 The command `pingall` in mininet test connectivity between all hosts in a network. In this scenario we can see that the four host `h1-h2-h3-h4` can see each other and also the couple `h5-h6`.
 
 <img src="Extra/Pingall-Lower.png" alt="wi" style="width:30%;" />
+
+Using iperf we can check the bandwidth among the hosts:
+
+<img src="Extra/TCP_lower.png" alt="wi" style="width:30%;" />
+<img src="Extra/UDP_lower.png" alt="wi" style="width:41%;" />
 
 # Scenario 3 - Upper
 
@@ -59,6 +70,11 @@ The command `pingall` in mininet test connectivity between all hosts in a networ
 
 <img src="Extra/Pingall-Upper.png" alt="wid" style="width:30%;" />
 
+Using iperf we can check the bandwidth among the hosts:
+
+<img src="Extra/TCP_higher.png" alt="wi" style="width:30%;" />
+<img src="Extra/UDP_higher.png" alt="wi" style="width:48%;" />
+
 # Scenario 4 - Total
 
 In this scenario, there are all the eight hosts and four switches. Hosts `h1-h2-h3-h4` are connected with two service slices, while hosts couples`h5-h6` and `h7-h8` are connected with two different topology slice. the slice for Video (UDP protocol) has to share the bandwidth with the topology slice, therefore the service slice no-Video take a maximum bandwidth of 6 Mbit/sec and topology slice take a maximum bandwidth of 4 Mbit/sec. Now, also the slice for Video (UDP protocol) has to share the bandwidth with the topology slice, therefore the service slice no-Video take a maximum bandwidth of 6 Mbit/sec and topology slice take a maximum bandwidth of 4 Mbit/sec.
@@ -69,6 +85,10 @@ The command `pingall` in mininet test connectivity between all hosts in a networ
 
 <img src="Extra/Pingall-Total.png" alt="wid" style="width:30%;" />
 
+Using iperf we can check the bandwidth among the hosts:
+
+<img src="Extra/TCP_total.png" alt="wi" style="width:30%;" />
+<img src="Extra/UDP_total.png" alt="wi" style="width:48%;" />
 # Run the demo
 
 Firstly, install the virtual machine, follow the instruction available at this [link](https://www.granelli-lab.org/researches/relevant-projects/comnetsemu-labs).

@@ -94,7 +94,6 @@ class MyController(app_manager.RyuApp):
 
     @set_ev_cls(ofp_event.EventOFPSwitchFeatures, CONFIG_DISPATCHER)
     def switch_features_handler(self, ev):
-        print("SONO IN switch_features_handler")
         datapath = ev.msg.datapath
         ofproto = datapath.ofproto
         parser = datapath.ofproto_parser
@@ -153,7 +152,7 @@ class MyController(app_manager.RyuApp):
 
         dpid = datapath.id
 
-        print(src,dst,dpid)
+        # print(src,dst,dpid)
         #check stesso slice
         if dpid in self.mac_to_port and ((src in self.slice_host.keys() and dst in self.slice_host.keys()) and self.slice_host[src] == self.slice_host[dst]):
 
