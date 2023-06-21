@@ -42,7 +42,7 @@ The command `pingall` in mininet test connectivity between all hosts in a networ
 Using iperf we can check the bandwidth among the hosts:
 
 <img src="Extra/TCP_default.png" alt="wi" style="width:30%;" />
-<img src="Extra/UDP_default.png" alt="wi" style="width:38.7%;" />
+<img src="Extra/UDP_default.png" alt="wi" style="width:36%;" />
 
 
 # Scenario 2 - Lower
