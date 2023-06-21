@@ -85,4 +85,3 @@ printf "OK\n\n"
 
 # Aggiungi la regola utilizzando ovs-ofctl
 
-
