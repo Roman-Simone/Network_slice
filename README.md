@@ -16,7 +16,7 @@
 - [Scenario 3 - Upper](#scenario-1---Upper)
 - [Scenario 4 - Total](#scenario-1---Total)
 - [Run the demo](#Run-the-demo)
-
+- [Other resources](#Other-resources)
 # Introduction
 
 The objective of this project is to develop a network slicing method that allows for the flexible activation and deactivation of network slices using command line interface (CLI) or graphical user interface (GUI) commands. To accomplish this objective, five scenarios have been suggested, all utilizing the same network structure. The aim is to examine the network's behavior when various components of the network undergo minor or major modifications.
