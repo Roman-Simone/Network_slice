@@ -1,6 +1,5 @@
-# OnDemand SDN Slicing using ComNetsEmu
-
-<div>
+<div align="center">
+        <h1>OnDemand SDN Slicing using ComNetsEmu</h1>
         <img src="https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54" alt="Python"/>
         <img src="https://img.shields.io/badge/shell_script-%23121011.svg?style=flat&logo=gnu-bash&logoColor=white" alt="Shell Script"/>
         <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white" alt="HTML"/>
@@ -33,7 +32,7 @@ The network topology is organized as follow:
 
 In this scenario, there are four hosts and four switches. The four hosts are connected with two service slices. One slice is for Video transmission (UDP protocol) and use switches: `s1-s2-s4` with a maximum bandwith of 10 Mbits/sec. The other' slice is for No-Video transmission (TCP and ICMP protocols) and use switches: `s1-s3-s4` with a maximum bandwith of 8 Mbits/sec.
 
-<img src="WebApp/images/Scenario_0_Lower.png" alt="wid" style="width:70%;" />
+<img lign="center" src="WebApp/images/Scenario_0_Lower.png" alt="wid" style="width:70%;" />
 
 The command `pingall` in mininet test connectivity between all hosts in a network. In this scenario we can see that only the four host `h1-h2-h3-h4` can see each other.
 
